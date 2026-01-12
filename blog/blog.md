@@ -87,27 +87,27 @@ The below is used for univariate outlier detection and spread measurement when d
 
 ![modified_z.png](../img/modified_z.png)
 
----
+## Visualization
 
-## Univariate Visualization**
+### **Univariate Visualization**
 - [Histograms](https://github.com/welldesignedsystem/friendly-fortnight/blob/main/blog/histogram.ipynb) ⭐ - spot distribution shape, outliers at tails. 
 - [Box plots](https://github.com/welldesignedsystem/friendly-fortnight/blob/main/blog/boxplot.ipynb) ⭐ - immediate visual of IQR outlier
 - [Violin plots](https://github.com/welldesignedsystem/friendly-fortnight/blob/main/blog/boxplot.ipynb) - density + outliers combined
-- [Q-Q]((https://github.com/welldesignedsystem/friendly-fortnight/blob/main/blog/qq.ipynb)) plots - check normality assumptions
-- Time series plots ⭐ - contextual anomalies, trends, seasonality
+- [Q-Q](https://github.com/welldesignedsystem/friendly-fortnight/blob/main/blog/qq.ipynb) plots - check normality assumptions
+- [Time series plots](https://github.com/welldesignedsystem/friendly-fortnight/blob/main/blog/timeseries.ipynb) ⭐ - contextual anomalies, trends, seasonality
 
-**Multivariate Visualization**
-- Scatter plots & pair plots ⭐ - bivariate outliers
-- Parallel coordinates - high-dimensional patterns
+### **Multivariate Visualization**
+- [Scatter plots & pair plots](https://github.com/welldesignedsystem/friendly-fortnight/blob/main/blog/scatter_n_pair.ipynb) ⭐ - bivariate outliers
+- [Parallel coordinates](https://github.com/welldesignedsystem/friendly-fortnight/blob/main/blog/parallel.ipynb)  - high-dimensional patterns
 - Heatmaps & correlation matrices - relationship anomalies
 - Andrews curves - multivariate data as curves
 
-**Distribution Comparison**
+### **Distribution Comparison**
 - Empirical CDF plots - compare distributions
 - Kernel Density Estimation (KDE) ⭐ - smooth distribution view
 - Lag plots - time series autocorrelation patterns
 
-**Advanced Visual Techniques**
+### **Advanced Visual Techniques**
 - Control charts ⭐⭐ (Shewhart, CUSUM, EWMA)
   - Used extensively in manufacturing
   - Real-time visual monitoring
@@ -116,23 +116,20 @@ The below is used for univariate outlier detection and spread measurement when d
 - Cook's distance - influence plots for regression
 - Residual plots - model-based anomaly visualization
 
-**Dimensionality Reduction for Visualization**
+### **Dimensionality Reduction for Visualization**
 - PCA projection (2D/3D) - visualize high-dimensional outliers
 - UMAP ⭐ - preserve local structure, great for clusters
 - t-SNE - good for exploration (not detection)
 
-**Interactive Dashboards ⭐⭐**
+### **Interactive Dashboards ⭐⭐**
 - Plotly Dash - interactive anomaly exploration
-- Streamlit - rapid prototyping
-- Grafana - time series monitoring in production
-- Kibana - log anomaly visualization
 
 _Why This Matters: Visual exploration is your first step before algorithms. Many production systems use visual dashboards for real-time monitoring. This is how you communicate findings to stakeholders and validate automated detections._
 _Practice: EDA on various datasets, build interactive dashboards, practice "anomaly spotting by eye"_
 
 ---
 
-### Phase 2: Distance and Density-Based Methods
+## Phase 2: Distance and Density-Based Methods
 **Distance Metrics & Scaling**
 - Euclidean, Manhattan, Mahalanobis distance
 - Feature scaling and normalization (critical for production)
@@ -152,7 +149,7 @@ _Practice: Multivariate tabular data, customer behavior, transaction records. Al
 
 ---
 
-### Phase 3: Ensemble Methods & Isolation Forest
+## Phase 3: Ensemble Methods & Isolation Forest
 **Isolation Forest ⭐⭐⭐**
 - How it works (isolation via random partitioning)
 - Why it's fast and scalable
@@ -174,7 +171,7 @@ _Practice: High-dimensional data, fraud detection datasets, log anomalies_
 
 ---
 
-### Phase 4: One-Class Classification
+## Phase 4: One-Class Classification
 **Core Concepts**
 - Novelty detection vs outlier detection vs rare class problems
 - When you have "normal" examples but few/no anomaly examples
@@ -198,7 +195,7 @@ _Practice: Imbalanced datasets, cases where anomalies are undefined during train
 
 ---
 
-### Phase 5: Dimensionality Reduction & Autoencoders
+## Phase 5: Dimensionality Reduction & Autoencoders
 **PCA for Anomaly Detection**
 - Reconstruction error approach
 - Hotelling's T² and SPE (Q-statistic)
@@ -225,7 +222,7 @@ _Practice: Image anomalies, multi-sensor industrial data, network packet inspect
 
 ---
 
-### Phase 6: Time Series Anomaly Detection
+## Phase 6: Time Series Anomaly Detection
 **Time Series Fundamentals**
 - Stationarity, trend, seasonality
 - Autocorrelation basics
@@ -258,7 +255,7 @@ _Practice: Server logs, sensor streams, financial time series, DevOps metrics_
 
 ---
 
-### Phase 7: Streaming & Online Detection ⭐⭐
+## Phase 7: Streaming & Online Detection ⭐⭐
 **Core Streaming Concepts**
 - Sliding window techniques
 - Fixed vs adaptive windows
@@ -297,7 +294,7 @@ _Practice: Kafka/streaming data, build real-time detection pipeline with live da
 
 ---
 
-### Phase 8: Graph-Based Anomaly Detection ⭐
+## Phase 8: Graph-Based Anomaly Detection ⭐
 **Graph Anomaly Types**
 - Node anomalies (unusual entities)
 - Edge anomalies (unusual relationships)
@@ -331,7 +328,7 @@ _Practice: Transaction networks, social graphs, communication patterns_
 
 ---
 
-### Phase 9: Domain-Specific Applications
+## Phase 9: Domain-Specific Applications
 **Choose 1-2 domains to specialize:**
 
 **Fraud Detection ⭐**
@@ -366,7 +363,7 @@ _Practice: Deep dive with real datasets in your chosen domain. Build complete mo
 
 ---
 
-### Phase 10: Production & Evaluation
+## Phase 10: Production & Evaluation
 **Evaluation Without Ground Truth ⭐⭐**
 - Precision at k
 - Volume under surface (VUS)
@@ -417,7 +414,7 @@ _Practice: End-to-end production pipeline with monitoring dashboards and alertin
 
 ---
 
-### Key Libraries & Tools to Master
+## Key Libraries & Tools to Master
 **Python Ecosystem:**
 - PyOD - 40+ algorithms, unified API
 - scikit-learn - IsolationForest, LOF, OneClassSVM
@@ -451,7 +448,7 @@ _Practice: End-to-end production pipeline with monitoring dashboards and alertin
 
 ---
 
-### Visual Detection Workflow (Core Practice)
+## Visual Detection Workflow (Core Practice)
 **Standard Workflow:**
 - Histogram/box plot → identify distribution type
 - Time series plot → spot temporal patterns
