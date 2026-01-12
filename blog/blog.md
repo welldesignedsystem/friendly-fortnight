@@ -118,7 +118,7 @@ The below is used for univariate outlier detection and spread measurement when d
 
 ### **Dimensionality Reduction for Visualization**
 - [PCA projection (2D/3D)](https://github.com/welldesignedsystem/friendly-fortnight/blob/main/blog/pca.ipynb)  - visualize high-dimensional outliers
-- UMAP ⭐ - preserve local structure, great for clusters
+- [UMAP](https://github.com/welldesignedsystem/friendly-fortnight/blob/main/blog/umap.ipynb) ⭐ - preserve local structure, great for clusters
 - t-SNE - good for exploration (not detection)
 
 ### **Interactive Dashboards ⭐⭐**
