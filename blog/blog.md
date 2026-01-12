@@ -90,10 +90,10 @@ The below is used for univariate outlier detection and spread measurement when d
 ---
 
 ## Univariate Visualization**
-- Histograms ⭐ - spot distribution shape, outliers at tails
-- Box plots ⭐ - immediate visual of IQR outlier
-- Violin plots - density + outliers combined
-- Q-Q plots - check normality assumptions
+- [Histograms](https://github.com/welldesignedsystem/friendly-fortnight/blob/main/blog/histogram.ipynb) ⭐ - spot distribution shape, outliers at tails. 
+- [Box plots](https://github.com/welldesignedsystem/friendly-fortnight/blob/main/blog/boxplot.ipynb) ⭐ - immediate visual of IQR outlier
+- [Violin plots](https://github.com/welldesignedsystem/friendly-fortnight/blob/main/blog/boxplot.ipynb) - density + outliers combined
+- [Q-Q]((https://github.com/welldesignedsystem/friendly-fortnight/blob/main/blog/qq.ipynb)) plots - check normality assumptions
 - Time series plots ⭐ - contextual anomalies, trends, seasonality
 
 **Multivariate Visualization**
