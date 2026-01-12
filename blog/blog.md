@@ -99,8 +99,8 @@ The below is used for univariate outlier detection and spread measurement when d
 ### **Multivariate Visualization**
 - [Scatter plots & pair plots](https://github.com/welldesignedsystem/friendly-fortnight/blob/main/blog/scatter_n_pair.ipynb) ⭐ - bivariate outliers
 - [Parallel coordinates](https://github.com/welldesignedsystem/friendly-fortnight/blob/main/blog/parallel.ipynb)  - high-dimensional patterns
-- Heatmaps & correlation matrices - relationship anomalies
-- Andrews curves - multivariate data as curves
+- [Heatmaps & correlation matrices](https://github.com/welldesignedsystem/friendly-fortnight/blob/main/blog/heatmap_n_correlation_mat.ipynb) - relationship anomalies
+- [Andrews curves](https://github.com/welldesignedsystem/friendly-fortnight/blob/main/blog/andrews.ipynb) - multivariate data as curves
 
 ### **Distribution Comparison**
 - Empirical CDF plots - compare distributions
