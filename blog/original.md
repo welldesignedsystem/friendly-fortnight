@@ -6,40 +6,7 @@ tags = ['Anomaly Detection', 'Outlier Detection', 'Machine learning']
 summary = "Comprehensive Guide to mastering Anomaly Detection in Machine Learning"
 +++
 
-## Phase 1: Foundations & Robust Statistics
-**Statistical Fundamentals**
-### Descriptive statistics:
-### Mean
-- **What:** Average of all values (sum ÷ count)
-- **Use when:** Normal distributions, no outliers, need interpretability
-- **Don't use when:** Outliers present, skewed data (income, response times)
-
-### Median
-- **What:** Middle value when sorted (50th percentile)
-- **Use when:** Outliers exist, skewed distributions, need robust center
-- **Don't use when:** Perfect normal data, need mathematical operations, very small samples
-
-### Variance
-- **What:** Average squared distance from mean
-- **Use when:** Measuring spread, normal data, statistical modeling
-- **Don't use when:** Outliers present, need interpretable units, heavy-tailed distributions
-
-### Standard Deviation
-
-- **What**: Square root of variance (spread in original units)
-- **Use when**: Describing spread, normal data, Z-scores, confidence intervals 
-- **Don't use when**: Outliers present, skewed data (use IQR/MAD instead)
-
-### Percentiles
-- **What:** Value below which X% of data falls (e.g., 25th, 95th)
-- **Use when:** Setting thresholds, skewed data, SLA monitoring (p99 latency)
-- **Don't use when:** Small datasets (<30), need smooth math properties
-- Probability distributions: normal, exponential, Poisson
-- Understanding what "normal" means in your data
-
-# Statistical Measures: Quick Reference
-
-## Descriptive Statistics
+## Statistical Measures - Descriptive Statistics
 
 ### Mean
 - **What:** Average of all values (sum ÷ count)
@@ -64,7 +31,6 @@ summary = "Comprehensive Guide to mastering Anomaly Detection in Machine Learnin
 ---
 
 ## Robust Statistical Methods
-### Overview
 The below is used for univariate outlier detection and spread measurement when data is non-normal or contains outliers.
 
 ### Standard Deviation
@@ -76,10 +42,9 @@ The below is used for univariate outlier detection and spread measurement when d
   - Measures average distance from mean
   - Sensitive to outliers - one extreme value can inflate it dramatically
   - Assumes roughly normal distribution
-- **Formula**: 
+- **Formula**:
 
-![std_dev.png](std_dev.png)
-
+![std_dev.png](../img/std_dev.png)
 
 ### Median Absolute Deviation (MAD) ⭐
 - **What:** Median of absolute deviations from median (robust spread measure)
@@ -91,10 +56,9 @@ The below is used for univariate outlier detection and spread measurement when d
   - Robust to outliers - extreme values don't distort it
   - Works with any distribution shape
 
-- **Formula**: 
+- **Formula**:
 
-![mad.png](mad.png)
-
+![mad.png](../img/mad.png)
 
 ### Interquartile Range (IQR)
 - **What:** Distance between 75th and 25th percentiles (middle 50% spread)
@@ -113,7 +77,7 @@ The below is used for univariate outlier detection and spread measurement when d
 - **Don't use when**: Outliers present (use Modified Z-score), skewed data, small samples
 - **Formula**
 
-![img.png](z.png)
+![img.png](../img/z.png)
 
 ### Modified Z-Score
 - **What:** Z-score using median and MAD instead of mean and SD
@@ -121,19 +85,18 @@ The below is used for univariate outlier detection and spread measurement when d
 - **Don't use when:** Clean normal data, classical Z-score works fine
 - **Forumla**
 
-![modified_z.png](modified_z.png)
+![modified_z.png](../img/modified_z.png)
 
 ---
 
-## Phase 1.5: Visual & Exploratory Detection ⭐⭐
-### Univariate Visualization**
+## Univariate Visualization**
 ### Histograms ⭐ - spot distribution shape, outliers at tails
 
 A histogram represents the frequency distribution of continuous data by dividing it into bins (intervals) and counting how many values fall into each bin. Unlike bar charts that show categorical data, histograms display numerical distributions.
 
-## Libraries Overview
+#### Libraries Overview
 
-We'll explore histogram creation using:
+following explores histogram creation using:
 - **Matplotlib** - The foundational plotting library
 - **Seaborn** - Statistical visualization built on Matplotlib
 - **Plotly** - Interactive web-based visualizations
@@ -259,7 +222,7 @@ fig.show()
 
 # From DataFrame with color grouping
 df = pd.DataFrame({'values': data, 'group': np.random.choice(['A', 'B'], 1000)})
-fig = px.histogram(df, x='values', color='group', nbins=30, 
+fig = px.histogram(df, x='values', color='group', nbins=30,
                    marginal='box',  # Add box plot on margin
                    opacity=0.7)
 fig.show()
@@ -338,39 +301,6 @@ plt.show()
 sns.histplot(x=x, y=y, bins=30, cmap='viridis')
 plt.show()
 ```
-
-## Comparison Table
-
-| Library | Best For | Interactivity | Learning Curve | Customization |
-|---------|----------|---------------|----------------|---------------|
-| Matplotlib | Full control, publication-quality | No | Medium | High |
-| Seaborn | Statistical plots, beautiful defaults | No | Low | Medium |
-| Plotly | Web apps, dashboards, exploration | Yes | Medium | High |
-| Pandas | Quick DataFrame exploration | No | Low | Low |
-| NumPy | Data computation, custom analysis | N/A | Low | N/A |
-
-## Choosing the Right Library
-
-- **Quick exploration**: Use Pandas `.hist()` or Seaborn `histplot()`
-- **Publication/reports**: Use Matplotlib or Seaborn with custom styling
-- **Interactive dashboards**: Use Plotly
-- **Statistical analysis**: Use Seaborn for built-in KDE and statistical features
-- **Custom calculations**: Use NumPy's `histogram()` function
-
-## Best Practices
-
-1. **Choose appropriate bin sizes**: Too few bins lose detail, too many create noise
-2. **Label your axes**: Always include descriptive labels and titles
-3. **Consider your audience**: Use interactive plots for exploration, static for reports
-4. **Normalize when comparing**: Use `density=True` when comparing distributions with different sample sizes
-5. **Show uncertainty**: Consider adding KDE curves or confidence intervals for better interpretation
-
-## Common Bin Selection Methods
-
-- **Sturges' Rule**: `bins = log₂(n) + 1` - Good for normal distributions
-- **Freedman-Diaconis**: Based on IQR - Robust to outliers
-- **Scott's Rule**: Based on standard deviation - Good for normal-like data
-- **Auto**: Matplotlib automatically chooses based on data characteristics
 
 ```python
 # Compare different bin methods
@@ -470,7 +400,7 @@ _Practice: High-dimensional data, fraud detection datasets, log anomalies_
 
 ---
 
-### Phase 4: One-Class Classification 
+### Phase 4: One-Class Classification
 **Core Concepts**
 - Novelty detection vs outlier detection vs rare class problems
 - When you have "normal" examples but few/no anomaly examples
@@ -768,4 +698,5 @@ _This workflow should be practiced in every phase_
 - ❌ K-means as primary detector - pedagogical only
 - ❌ GAN-based anomaly detection - unstable, low ROI in production
 - ❌ Connectivity-based outlier factor - LOF is better
+
 

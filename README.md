@@ -1,2 +1,0 @@
-# friendly-fortnight
-Anomaly Detection
