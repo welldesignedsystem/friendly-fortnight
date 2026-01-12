@@ -117,7 +117,7 @@ The below is used for univariate outlier detection and spread measurement when d
 - Residual plots - model-based anomaly visualization
 
 ### **Dimensionality Reduction for Visualization**
-- PCA projection (2D/3D) - visualize high-dimensional outliers
+- [PCA projection (2D/3D)](https://github.com/welldesignedsystem/friendly-fortnight/blob/main/blog/pca.ipynb)  - visualize high-dimensional outliers
 - UMAP ⭐ - preserve local structure, great for clusters
 - t-SNE - good for exploration (not detection)
 
