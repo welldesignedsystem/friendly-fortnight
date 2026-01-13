@@ -151,7 +151,7 @@ _Practice: Multivariate tabular data, customer behavior, transaction records. Al
 - When it excels vs when it fails
 - Hyperparameter tuning
 
-### **Ensemble Strategies**
+### **[Ensemble Strategies](https://github.com/welldesignedsystem/friendly-fortnight/blob/main/blog/ensemble.ipynb)**
 - Feature bagging
 - Score normalization techniques
 - Combining multiple detectors for robustness
